@@ -1,0 +1,5 @@
+{
+    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+    "python.pythonPath": "psets/bin/python"
+}
