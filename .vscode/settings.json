@@ -1,5 +1,5 @@
 {
     "editor.fontFamily": "'Source Code Pro', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontSize": 16,
-    "python.pythonPath": "psets/bin/python"
+    "python.pythonPath": "/home/nikhil/Repos/6.0001/Problem sets/6.0001/psets/bin/python"
 }
