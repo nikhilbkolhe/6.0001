@@ -1,5 +1,3 @@
-#test commit to repo
-#test changes from repo
 # User Input
 annual_salary_str = input("Enter your annual salary: ")
 annual_salary = float(annual_salary_str) 
