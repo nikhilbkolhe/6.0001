@@ -252,9 +252,9 @@ def match_with_gaps(my_word, other_word):
              False otherwise: 
     '''
     my_word_stripped = my_word.strip(" ")
-    my_word_stripped = my_word_stripped.replace(" ","")
-    unique_letters = set(my_word_stripped)
-    unique_letters.discard("_")
+    my_word_stripped = my_word_stripped.replace(" ","")             # 'a_ _ ple ' => 'a__ple'
+    unique_letters = set(my_word_stripped)                          # 'a__ple' => ['a', 'p', 'l', '_']
+    unique_letters.discard("_")                                     # ['a', 'p', 'l', '_'] => ['a', 'p', 'l']
     is_match_with_gaps = True
     
     # return Flase if lengths dont match
