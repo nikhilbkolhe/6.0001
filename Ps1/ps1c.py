@@ -52,13 +52,15 @@ if not ((calculateSavings(start_rate,semi_annual_raise,monthly_salary) > portion
         print("Not possible with this salary")
 else:
     while (abs(calculateSavings(end_rate,semi_annual_raise,monthly_salary) - portion_downpayment) > 100):
-        if ((calculateSavings(start_rate,semi_annual_raise,monthly_salary) > portion_downpayment )
-            ^ (calculateSavings(end_rate, semi_annual_raise, monthly_salary) > portion_downpayment)):
+        if (calculateSavings(end_rate,semi_annual_raise,monthly_salary) < portion_downpayment ):
+            bisection_count += 1
+            start_rate = end_rate
+            end_rate = previous_end_rate
+        else:
             previous_end_rate = end_rate
             end_rate = (start_rate + end_rate) / 2
-        else:
-            start_rate = previous_end_rate
-    print("optimal rate:",end_rate / 10000)
-    print("optimal rate 2:",start_rate / 10000)
+    print("bisection count:",bisection_count)
+    print("optimal rate:",round(end_rate / 10000,4))
+    print("optimal rate 2:",round(start_rate / 10000,4))
 
 
